@@ -1,0 +1,24 @@
+<div>
+    Name: <input type="text" [(ngModel)]="q">
+    <button (click)="searchName()">Search</button>
+    <div *ngIf="response">
+    <!-- <p>About: {{response.data[0].about}}</p> -->
+    <!-- <img src="{{response.data[0].images.webp.image_url}}">  -->
+</div>
+
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{response.data[0].name}}</mat-card-title>
+      <mat-card-subtitle>{{response.data[0].nicknames}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{response.data[0].images.webp.image_url}}" >
+    <mat-card-content>
+      <p>About: {{response.data[0].about}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button> -->
+    </mat-card-actions>
+  </mat-card>
