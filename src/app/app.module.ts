@@ -7,11 +7,20 @@ import { FormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { TopPagesComponent } from './pages/top-pages/top-pages.component';
+import { AnimePagesComponent } from './pages/anime-pages/anime-pages.component';
+import { MangaPagesComponent } from './pages/manga-pages/manga-pages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    CardComponent,
+    MainPageComponent,
+    TopPagesComponent,
+    AnimePagesComponent,
+    MangaPagesComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +28,8 @@ import { MatCardModule } from '@angular/material/card';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

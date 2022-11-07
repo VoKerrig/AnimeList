@@ -2,14 +2,12 @@
     Name: <input type="text" [(ngModel)]="q">
     <button (click)="searchName()">Search</button>
     <div *ngIf="response">
-    <!-- <p>About: {{response.data[0].about}}</p> -->
-    <!-- <img src="{{response.data[0].images.webp.image_url}}">  -->
 </div>
 
 
 <mat-card class="example-card">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
+      <div mat-card-avatar ></div>
       <mat-card-title>{{response.data[0].name}}</mat-card-title>
       <mat-card-subtitle>{{response.data[0].nicknames}}</mat-card-subtitle>
     </mat-card-header>

@@ -1,0 +1,44 @@
+@font-face {
+    font-family: Littlewitch;
+    src: url("../../../assets/fonts/LittlewitchRegular.otf") format("opentype");     
+}
+
+.project {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    height: 80px;
+    background-color:  #759cd8;
+    
+    
+    &-logo {
+        display: flex;
+        width: 200px;
+        margin-left: 50px;
+        align-items: center;
+        font-family: 'Littlewitch';
+        font-size: 60px;
+        // text-decoration: none;
+        :visited {color: black};
+        :any-link {color: black};
+    }
+
+    &-left {
+        display: flex;
+        width: 500px;
+        align-items: center;
+        justify-content: space-evenly;
+        :visited {color: black};
+        :any-link {color: black;};
+    }
+}
+
+.link {
+    text-decoration: none;
+}
