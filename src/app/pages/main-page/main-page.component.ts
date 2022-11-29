@@ -14,7 +14,6 @@ enum Seasons {
 export class MainPageComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
-  response: any;
   index = 0;
   items: Datum [] = [];
 
@@ -29,6 +28,10 @@ export class MainPageComponent implements OnInit {
 
   get rounded(): number {
     return Math.floor(this.index / this.itemsCount);
+  }
+
+  get roundedLength(): number {
+    return Math.floor(this.items.length / this.itemsCount);
   }
 
   onIndex(index: number): void {

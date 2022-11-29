@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from './components/card/card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
@@ -15,9 +15,9 @@ import { TopPagesComponent } from './pages/top-pages/top-pages.component';
 import { AnimePagesComponent } from './pages/anime-pages/anime-pages.component';
 import { MangaPagesComponent } from './pages/manga-pages/manga-pages.component';
 import { HeaderComponent } from './components/header/header.component';
-import { TuiCarouselModule } from "@taiga-ui/kit";
-import { TuiIslandModule } from "@taiga-ui/kit"; 
-import { TuiPaginationModule } from '@taiga-ui/kit';
+import { TuiCarouselModule, TuiIslandModule, TuiPaginationModule, TuiInputModule } from "@taiga-ui/kit";
+import { TuiSvgModule } from '@taiga-ui/core';
+import { tuiCoreIcons } from "@taiga-ui/icons";
 
 @NgModule({
   declarations: [
@@ -34,6 +34,7 @@ import { TuiPaginationModule } from '@taiga-ui/kit';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
@@ -42,7 +43,10 @@ import { TuiPaginationModule } from '@taiga-ui/kit';
       TuiAlertModule,
       TuiCarouselModule,
       TuiIslandModule,
-      TuiPaginationModule
+      TuiPaginationModule,
+      TuiInputModule,
+      TuiSvgModule,
+      // tuiCoreIcons
 ],
   providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
   bootstrap: [AppComponent]

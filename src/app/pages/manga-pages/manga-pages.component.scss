@@ -1,0 +1,31 @@
+.anime-page {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.item {
+    margin: 10px;
+    height: 400px;
+    width: 250px;
+    padding-left: 40px;
+    box-shadow: 0 1.125rem 1.875rem rgb(0 0 0 / 40%);
+}
+
+.tui-island__title {
+    font-size: 18px;
+}
+
+.related-anime {
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.hr-related-anime {
+    display: block;
+    margin: 15px 20px 0px 20px;
+    border: 2px;
+    background-color: black;
+}

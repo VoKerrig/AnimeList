@@ -55,9 +55,9 @@ export interface From {
 }
 
 export interface To {
-    day?: any;
-    month?: any;
-    year?: any;
+    day?: number;
+    month?: number;
+    year?: number;
 }
 
 export interface Prop {
@@ -67,7 +67,7 @@ export interface Prop {
 
 export interface Aired {
     from: Date;
-    to?: any;
+    to?: Date;
     prop: Prop;
     string: string;
 }
@@ -134,7 +134,7 @@ export interface Datum {
     title_synonyms: string[];
     type: string;
     source: string;
-    episodes?: number;
+    episodes: number;
     status: string;
     airing: boolean;
     aired: Aired;
@@ -149,7 +149,7 @@ export interface Datum {
     synopsis: string;
     background: string;
     season: string;
-    year: number;
+    year?: number;
     broadcast: Broadcast;
     producers: Producer[];
     licensors: Licensor[];
@@ -160,7 +160,33 @@ export interface Datum {
     demographics: Demographic[];
 }
 
+export interface Links {
+    first: string;
+    last: string;
+    prev?: any;
+    next: string;
+}
+
+export interface Link {
+    url: string;
+    label: string;
+    active: boolean;
+}
+
+export interface Meta {
+    current_page: number;
+    from: number;
+    last_page: number;
+    links: Link[];
+    path: string;
+    per_page: number;
+    to: number;
+    total: number;
+}
+
 export interface RootObject {
     pagination: Pagination;
     data: Datum[];
+    links: Links;
+    meta: Meta;
 }

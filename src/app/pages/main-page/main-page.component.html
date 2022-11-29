@@ -1,7 +1,8 @@
 <div class="body">
-    <!-- <app-card></app-card> -->
+    <div class="related-anime">Сейчас на экранах:</div>
+    <hr class="hr-related-anime">
     <tui-carousel
-        [itemsCount]="3"
+        [itemsCount]="5"
         [(index)]="index"
     >
         <ng-container *ngFor="let item of items">
@@ -10,16 +11,16 @@
                 class="item"
             >
                 <h2 class="tui-island__title">{{ item.title }}</h2>
-                <div class="tui-island__content">{{ item.images.webp.image_url }}</div>
+                <img class="tui-island__content" src="{{ item.images.webp.image_url }}">
             </tui-island>
         </ng-container>
     </tui-carousel>
     <tui-pagination
         size="m"
         class="tui-space_top-4"
-        [length]="items.length / itemsCount"
+        [length]="roundedLength"
         [index]="rounded"
         (indexChange)="onIndex($event)"
     ></tui-pagination>
-
 </div>
+

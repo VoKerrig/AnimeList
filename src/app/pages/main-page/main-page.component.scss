@@ -1,5 +1,26 @@
-.item {
-    margin-bottom: auto;
-    margin-top: 20px;
+.body {
+    display: grid;
 }
 
+.related-anime {
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.hr-related-anime {
+    display: block;
+    margin: 15px 20px 0px 20px;
+    border: 2px;
+    background-color: black;
+}
+
+.item {
+    margin-top: 5px;
+    margin-bottom: 50px;
+    height: 400px;
+    width: 250px;
+    padding-left: 40px;
+    box-shadow: 0 1.125rem 1.875rem rgb(0 0 0 / 40%);
+}

@@ -1,1 +1,11 @@
-<p>manga-pages works!</p>
+<div class="related-anime">Топ-25 манги:</div>
+<hr class="hr-related-anime">
+<div class="anime-page">
+    <ng-container *ngFor="let item of items">
+        <tui-island class="item" >
+            <h2 class="tui-island__title">{{ item.title }}</h2>
+            <img class="tui-island__content" src="{{ item.images.webp.image_url }}">
+        </tui-island>
+    </ng-container>
+</div>
+
