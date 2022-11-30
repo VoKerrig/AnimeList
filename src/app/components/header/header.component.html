@@ -3,16 +3,13 @@
         <a routerLink="/" class="link">Anime List</a>
     </div>
     <div class="header-left">
-        <button mat-raised-button routerLink="/anime" color="primary">Anime</button>
-        <button mat-raised-button routerLink="/manga"  color="primary">Manga</button>
-        <button mat-raised-button routerLink="top"  color="primary">Test</button>
+        <button tuiButton size="m" class="logo" routerLink="/anime" color="primary">Anime</button>
+        <button tuiButton size="m" class="header-button" routerLink="/manga"  color="primary">Manga</button>
+        <button tuiButton size="m" class="header-button" routerLink="top"  color="primary">Test</button>
     </div>
     <div class="header-right">
         <div>
-            <tui-input 
-                tuiTextfieldSize="s"
-            
-            >    
+            <tui-input class="header-input" tuiTextfieldSize = "s" tuiTextfieldIconLeft="tuiIconSearchLarge" >    
                 Поиск
             </tui-input>
         </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Datum, RootObject } from 'src/app/Interfaces/api';
+import { Datum, RootObject } from 'src/app/Interfaces/seasonNow';
 
 enum Anime {
   topAnime = 'https://api.jikan.moe/v4/top/anime'

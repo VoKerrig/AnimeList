@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { RootObject, Datum } from 'src/app/Interfaces/api';
+import { RootObject, Datum } from 'src/app/Interfaces/seasonNow';
 
-enum Seasons {
-  seasonNow = 'https://api.jikan.moe/v4/seasons/now'
+enum Anime {
+  seasonNow = 'https://api.jikan.moe/v4/seasons/now',
 }
 
 @Component({
@@ -16,9 +16,10 @@ export class MainPageComponent implements OnInit {
   constructor(private http: HttpClient) { }
   index = 0;
   items: Datum [] = [];
+  itemsRec: Datum [] = [];
 
   ngOnInit(): void {
-    this.http.get<RootObject>(Seasons.seasonNow).subscribe((value: RootObject) => {
+    this.http.get<RootObject>(Anime.seasonNow).subscribe((value: RootObject) => {
       console.log(value.data[0].title)
       this.items = value.data;
     })
@@ -37,5 +38,4 @@ export class MainPageComponent implements OnInit {
   onIndex(index: number): void {
     this.index = index * this.itemsCount;
   }
-
 }
